@@ -1,0 +1,180 @@
+$ mem[1] = mem[265]
+$ mem[4] = mem[248]
+  mem[5] = mem[4]
+  mem[7] = (mem[5]==0)? 30 : mem[1]
+  mem[8] = mem[7] - 1
+$ mem[9] = mem[263]
+  mem[11] = (mem[5]==0)? 1 : mem[9]
+  mem[12] = mem[11] - 1
+  mem[14] = mem[(mem[12]==0)? 8 : 7]
+$ mem[15] = mem[264]
+  mem[18] = (mem[5]==0)? 1000 : mem[15]
+  mem[20] = mem[18] * 2
+  mem[22] = mem[(mem[12]==0)? 20 : 18]
+  mem[24] = mem[(mem[12]==0)? 18 : 12]
+$ mem[25] = mem[260]
+$ mem[26] = mem[262]
+  mem[35] = (config==1004)? 38330909.09090909090909090909 : 0
+  mem[41] = (config==1003)? 28109333.33333333333333333333 : mem[35]
+  mem[46] = (config==1002)? 21082000 : mem[41]
+  mem[50] = (config==1001)? 42164000 : mem[46]
+  mem[52] = mem[(mem[5]==0)? 50 : 26]
+$ mem[53] = mem[255]
+  mem[57] = (config==1004)? 6457000 : 0
+  mem[59] = (config==1003)? 0 : mem[57]
+  mem[62] = (config==1002)? -6357000 : mem[59]
+  mem[64] = (config==1001)? 0 : mem[62]
+  mem[66] = mem[(mem[5]==0)? 64 : 53]
+$ mem[67] = mem[250]
+  mem[69] = (mem[5]==0)? 0 : mem[67]
+  mem[70] = mem[69] - mem[66]
+  mem[71] = mem[70] * mem[70]
+$ mem[72] = mem[249]
+  mem[74] = (mem[5]==0)? 0 : mem[72]
+$ mem[75] = mem[254]
+  mem[77] = (mem[33]==0)? 0 : 0
+  mem[80] = (config==1003)? 8357000 : mem[77]
+  mem[83] = (config==1002)? 6357000 : mem[80]
+  mem[86] = (config==1001)? 6557000 : mem[83]
+  mem[88] = mem[(mem[5]==0)? 86 : 75]
+  mem[89] = mem[74] - mem[88]
+  mem[90] = mem[89] ^ 2
+  mem[91] = mem[90] + mem[71]
+  mem[92] = √mem[91]
+  mem[93] = mem[92] ^ 2
+  mem[94] = mem[92] ^ 3
+$ mem[95] = mem[251]
+  mem[98] = (mem[5]==0)? 6.0e24 : mem[95]
+  mem[100] = 6.67428e-11 * mem[98]
+  mem[101] = mem[100] / mem[94]
+  mem[102] = mem[70] * mem[101]
+  mem[103] = ΔVy
+  mem[104] = 1/1 ;; mem[0] / mem[0]
+  mem[105] = mem[103] / mem[104]
+  mem[106] = mem[105] + mem[102]
+  mem[107] = mem[104] ^ 2
+  mem[108] = mem[107] / 2
+  mem[109] = mem[106] * mem[108]
+$ mem[110] = mem[258]
+  mem[113] = mem[(config==1003)? -6922.335358521935 : 77]
+  mem[116] = mem[(config==1002)? -4719.317909067122 : 113]
+  mem[119] = mem[(config==1001)? -7814.932738513376 : 116]
+  mem[121] = mem[(mem[5]==0)? 119 : 110]
+  mem[122] = mem[121] * mem[104]
+  mem[123] = mem[66] + mem[122]
+  mem[124] = mem[123] + mem[109]
+  mem[125] = mem[124] - mem[69]
+  mem[126] = mem[125] ^ 2
+  mem[127] = mem[89] * mem[101]
+  mem[128] = ΔVx
+  mem[129] = mem[128] / mem[104]
+  mem[130] = mem[129] + mem[127]
+  mem[131] = mem[130] * mem[108]
+$ mem[132] = mem[257]
+  switch (config) {
+    case 1004: mem[135] = mem[137] = mem[139] = mem[141] = -7875.215433235455;
+    case 1003: mem[135] = 0; mem[137] = mem[139] = mem[141] = mem[54];
+    case 1002: mem[135] = mem[137] = 0; mem[139] = mem[141] = mem[114];
+    case 1001: mem[135] = mem[137] = mem[139] = 0; mem[141] = mem[54];
+  }
+  mem[143] = (mem[5]==0)? mem[141] : mem[132];
+  mem[144] = mem[143] * mem[104]
+  mem[145] = mem[88] + mem[144]
+  mem[146] = mem[145] + mem[131]
+  mem[147] = mem[146] - mem[74]
+  mem[148] = mem[147] ^ 2
+  mem[149] = mem[148] + mem[126]
+  mem[150] = √mem[149]
+  mem[151] = mem[150] - mem[52]
+  mem[152] = - mem[151]
+  mem[153] = mem[151]
+  mem[155] = (mem[153] < 0)? mem[152] : mem[151]
+  mem[156] = mem[25] + mem[155]
+  mem[157] = mem[105] * mem[105]
+  mem[158] = mem[129] ^ 2
+  mem[159] = mem[158] + mem[157]
+  mem[160] = √mem[159]
+  mem[161] = mem[160]
+  mem[163] = (mem[161] = 0)? mem[156] : 0
+  mem[164] = mem[155] - 1000
+  mem[166] = (mem[164] < 0)? mem[163] : 0
+  mem[167] = mem[69] - mem[124]
+  mem[168] = mem[167] * mem[167]
+  mem[169] = mem[74] - mem[146]
+  mem[170] = mem[169] ^ 2
+  mem[171] = mem[170] + mem[168]
+  mem[172] = √mem[171]
+  mem[173] = mem[172] ^ 2
+  mem[174] = mem[172] ^ 3
+  mem[175] = mem[100] / mem[174]
+  mem[176] = mem[167] * mem[175]
+  mem[177] = mem[176] + mem[102]
+  mem[178] = mem[177] / 2
+  mem[179] = mem[105] + mem[178]
+  mem[180] = mem[179] * mem[104]
+  mem[181] = mem[121] + mem[180]
+  mem[182] = mem[169] * mem[175]
+  mem[183] = mem[182] + mem[127]
+  mem[184] = mem[183] / 2
+  mem[185] = mem[129] + mem[184]
+  mem[186] = mem[185] * mem[104]
+  mem[187] = mem[143] + mem[186]
+$ mem[188] = mem[256]
+  mem[189] = 1
+  mem[191] = (config=-1004)? 1 : 0
+  mem[193] = (config==1003)? 1 : mem[191]
+  mem[195] = (config==1002)? 1 : mem[193]
+  mem[197] = (config==1001)? 1 : mem[195]
+  mem[199] = mem[(mem[5]==0)? 197 : 188]
+$ mem[200] = mem[253]
+  mem[202] = (mem[5]==0)? 0 : mem[200]
+$ mem[203] = mem[252]
+  mem[205] = (mem[5]==0)? 0 : mem[203]
+  mem[206] = mem[4] + 1
+$ mem[207] = mem[259]
+  mem[208] = mem[207] + 1
+  mem[210] = (mem[161]==0)? mem[208] : 0
+  mem[212] = (mem[164] < 0)? mem[210] : 0
+$ mem[213] = mem[261]
+  mem[216] = (mem[5]==0)? 10000 : mem[213]
+  mem[217] = mem[160] * mem[104]
+  mem[218] = mem[216] - mem[217]
+  mem[221] = 10000 - mem[218]
+  mem[222] = mem[221] / 10000
+  mem[223] = mem[222] * 45
+  mem[224] = mem[7] + mem[223]
+  mem[225] = mem[224] + 25
+  mem[227] = 900 / mem[104]
+  mem[228] = mem[227] - mem[212]
+  mem[230] = mem[(mem[228] < 0)? 225 : 3]
+  mem[231] = mem[218]
+$ mem[232] = mem[242] - 1
+  mem[234] = (mem[231] < 0)? mem[232] : mem[230]
+  mem[235] = 10000 - mem[217]
+  mem[237] = (mem[235] < 0)? mem[232] : mem[234]
+  mem[239] = mem[150] - 6357000
+  mem[241] = (mem[239] < 0)? mem[232] : mem[237]
+
+  mem[242] = 0
+  OUT[0] = mem[241]
+  OUT[2] = mem[169]
+  OUT[3] = mem[167]
+  mem[248] = mem[206]
+  mem[249] = mem[74]
+  mem[250] = mem[69]
+  mem[251] = mem[98]
+  mem[252] = mem[205]
+  mem[253] = mem[202]
+  mem[254] = mem[146]
+  mem[255] = mem[124]
+  mem[256] = mem[199]
+  mem[257] = mem[187]
+  mem[258] = mem[181]
+  mem[259] = mem[212]
+  mem[260] = mem[166]
+  mem[261] = OUT[1] = mem[218]
+  mem[262] = OUT[4] = mem[52]
+  mem[263] = mem[24]
+  mem[264] = mem[22]
+  mem[265] = mem[14]
+  

@@ -1,0 +1,267 @@
+> mem[0] = 1.0
+mem[1] ←  mem[265]
+mem[2] = 30.0
+mem[3] = 0.0
+mem[4] ←  mem[248]
+mem[5] ←  mem[4] - mem[3]
+status ←  (mem[5] #<subr => 0)
+mem[7] ←  mem[status ? 2 : 1]
+mem[8] ←  mem[7] - mem[0]
+mem[9] ←  mem[263]
+status ←  (mem[5] #<subr => 0)
+mem[11] ←  mem[status ? 0 : 9]
+mem[12] ←  mem[11] - mem[0]
+status ←  (mem[12] #<subr => 0)
+mem[14] ←  mem[status ? 8 : 7]
+mem[15] ←  mem[264]
+mem[16] = 1000.0
+status ←  (mem[5] #<subr => 0)
+mem[18] ←  mem[status ? 16 : 15]
+mem[19] = 2.0
+mem[20] ←  mem[18] * mem[19]
+status ←  (mem[12] #<subr => 0)
+mem[22] ←  mem[status ? 20 : 18]
+status ←  (mem[12] #<subr => 0)
+mem[24] ←  mem[status ? 18 : 12]
+mem[25] ←  mem[260]
+mem[26] ←  mem[262]
+mem[27] = 1.1
+mem[28] = 42164.0
+mem[29] ←  mem[28] * mem[16]
+mem[30] ←  mem[29] / mem[27]
+mem[31] = 1004.0
+mem[32] ←  IN[16000]
+mem[33] ←  mem[32] - mem[31]
+status ←  (mem[33] #<subr => 0)
+mem[35] ←  mem[status ? 30 : 3]
+mem[36] = 1.5
+mem[37] ←  mem[29] / mem[36]
+mem[38] = 1003.0
+mem[39] ←  mem[32] - mem[38]
+status ←  (mem[39] #<subr => 0)
+mem[41] ←  mem[status ? 37 : 35]
+mem[42] ←  mem[29] / mem[19]
+mem[43] = 1002.0
+mem[44] ←  mem[32] - mem[43]
+status ←  (mem[44] #<subr => 0)
+mem[46] ←  mem[status ? 42 : 41]
+mem[47] = 1001.0
+mem[48] ←  mem[32] - mem[47]
+status ←  (mem[48] #<subr => 0)
+mem[50] ←  mem[status ? 29 : 46]
+status ←  (mem[5] #<subr => 0)
+mem[52] ←  mem[status ? 50 : 26]
+mem[53] ←  mem[255]
+mem[54] = 0.0
+mem[55] = 6457000.0
+status ←  (mem[33] #<subr => 0)
+mem[57] ←  mem[status ? 55 : 3]
+status ←  (mem[39] #<subr => 0)
+mem[59] ←  mem[status ? 54 : 57]
+mem[60] = -6357000.0
+status ←  (mem[44] #<subr => 0)
+mem[62] ←  mem[status ? 60 : 59]
+status ←  (mem[48] #<subr => 0)
+mem[64] ←  mem[status ? 54 : 62]
+status ←  (mem[5] #<subr => 0)
+mem[66] ←  mem[status ? 64 : 53]
+mem[67] ←  mem[250]
+status ←  (mem[5] #<subr => 0)
+mem[69] ←  mem[status ? 3 : 67]
+mem[70] ←  mem[69] - mem[66]
+mem[71] ←  mem[70] * mem[70]
+mem[72] ←  mem[249]
+status ←  (mem[5] #<subr => 0)
+mem[74] ←  mem[status ? 3 : 72]
+mem[75] ←  mem[254]
+status ←  (mem[33] #<subr => 0)
+mem[77] ←  mem[status ? 54 : 3]
+mem[78] = 8357000.0
+status ←  (mem[39] #<subr => 0)
+mem[80] ←  mem[status ? 78 : 77]
+mem[81] = 6357000.0
+status ←  (mem[44] #<subr => 0)
+mem[83] ←  mem[status ? 81 : 80]
+mem[84] = 6557000.0
+status ←  (mem[48] #<subr => 0)
+mem[86] ←  mem[status ? 84 : 83]
+status ←  (mem[5] #<subr => 0)
+mem[88] ←  mem[status ? 86 : 75]
+mem[89] ←  mem[74] - mem[88]
+mem[90] ←  mem[89] * mem[89]
+mem[91] ←  mem[90] + mem[71]
+mem[92] ←  √mem[91]
+mem[93] ←  mem[92] * mem[92]
+mem[94] ←  mem[93] * mem[92]
+mem[95] ←  mem[251]
+mem[96] = 6.0e24
+status ←  (mem[5] #<subr => 0)
+mem[98] ←  mem[status ? 96 : 95]
+mem[99] = 6.67428e-11
+mem[100] ←  mem[99] * mem[98]
+mem[101] ←  mem[100] / mem[94]
+mem[102] ←  mem[70] * mem[101]
+mem[103] ←  IN[3]
+mem[104] ←  mem[0] / mem[0]
+mem[105] ←  mem[103] / mem[104]
+mem[106] ←  mem[105] + mem[102]
+mem[107] ←  mem[104] * mem[104]
+mem[108] ←  mem[107] / mem[19]
+mem[109] ←  mem[106] * mem[108]
+mem[110] ←  mem[258]
+mem[111] = -6922.335358521935
+status ←  (mem[39] #<subr => 0)
+mem[113] ←  mem[status ? 111 : 77]
+mem[114] = -4719.317909067122
+status ←  (mem[44] #<subr => 0)
+mem[116] ←  mem[status ? 114 : 113]
+mem[117] = -7814.932738513376
+status ←  (mem[48] #<subr => 0)
+mem[119] ←  mem[status ? 117 : 116]
+status ←  (mem[5] #<subr => 0)
+mem[121] ←  mem[status ? 119 : 110]
+mem[122] ←  mem[121] * mem[104]
+mem[123] ←  mem[66] + mem[122]
+mem[124] ←  mem[123] + mem[109]
+mem[125] ←  mem[124] - mem[69]
+mem[126] ←  mem[125] * mem[125]
+mem[127] ←  mem[89] * mem[101]
+mem[128] ←  IN[2]
+mem[129] ←  mem[128] / mem[104]
+mem[130] ←  mem[129] + mem[127]
+mem[131] ←  mem[130] * mem[108]
+mem[132] ←  mem[257]
+mem[133] = -7875.215433235455
+status ←  (mem[33] #<subr => 0)
+mem[135] ←  mem[status ? 133 : 3]
+status ←  (mem[39] #<subr => 0)
+mem[137] ←  mem[status ? 54 : 135]
+status ←  (mem[44] #<subr => 0)
+mem[139] ←  mem[status ? 114 : 137]
+status ←  (mem[48] #<subr => 0)
+mem[141] ←  mem[status ? 54 : 139]
+status ←  (mem[5] #<subr => 0)
+mem[143] ←  mem[status ? 141 : 132]
+mem[144] ←  mem[143] * mem[104]
+mem[145] ←  mem[88] + mem[144]
+mem[146] ←  mem[145] + mem[131]
+mem[147] ←  mem[146] - mem[74]
+mem[148] ←  mem[147] * mem[147]
+mem[149] ←  mem[148] + mem[126]
+mem[150] ←  √mem[149]
+mem[151] ←  mem[150] - mem[52]
+mem[152] ←  mem[3] - mem[151]
+mem[153] ←  mem[151] - mem[3]
+status ←  (mem[153] #<subr <> 0)
+mem[155] ←  mem[status ? 152 : 151]
+mem[156] ←  mem[25] + mem[155]
+mem[157] ←  mem[105] * mem[105]
+mem[158] ←  mem[129] * mem[129]
+mem[159] ←  mem[158] + mem[157]
+mem[160] ←  √mem[159]
+mem[161] ←  mem[160] - mem[3]
+status ←  (mem[161] #<subr => 0)
+mem[163] ←  mem[status ? 156 : 3]
+mem[164] ←  mem[155] - mem[16]
+status ←  (mem[164] #<subr <> 0)
+mem[166] ←  mem[status ? 163 : 3]
+mem[167] ←  mem[69] - mem[124]
+mem[168] ←  mem[167] * mem[167]
+mem[169] ←  mem[74] - mem[146]
+mem[170] ←  mem[169] * mem[169]
+mem[171] ←  mem[170] + mem[168]
+mem[172] ←  √mem[171]
+mem[173] ←  mem[172] * mem[172]
+mem[174] ←  mem[173] * mem[172]
+mem[175] ←  mem[100] / mem[174]
+mem[176] ←  mem[167] * mem[175]
+mem[177] ←  mem[176] + mem[102]
+mem[178] ←  mem[177] / mem[19]
+mem[179] ←  mem[105] + mem[178]
+mem[180] ←  mem[179] * mem[104]
+mem[181] ←  mem[121] + mem[180]
+mem[182] ←  mem[169] * mem[175]
+mem[183] ←  mem[182] + mem[127]
+mem[184] ←  mem[183] / mem[19]
+mem[185] ←  mem[129] + mem[184]
+mem[186] ←  mem[185] * mem[104]
+mem[187] ←  mem[143] + mem[186]
+mem[188] ←  mem[256]
+mem[189] = 1.0
+status ←  (mem[33] #<subr => 0)
+mem[191] ←  mem[status ? 189 : 3]
+status ←  (mem[39] #<subr => 0)
+mem[193] ←  mem[status ? 189 : 191]
+status ←  (mem[44] #<subr => 0)
+mem[195] ←  mem[status ? 189 : 193]
+status ←  (mem[48] #<subr => 0)
+mem[197] ←  mem[status ? 189 : 195]
+status ←  (mem[5] #<subr => 0)
+mem[199] ←  mem[status ? 197 : 188]
+mem[200] ←  mem[253]
+status ←  (mem[5] #<subr => 0)
+mem[202] ←  mem[status ? 3 : 200]
+mem[203] ←  mem[252]
+status ←  (mem[5] #<subr => 0)
+mem[205] ←  mem[status ? 3 : 203]
+mem[206] ←  mem[4] + mem[0]
+mem[207] ←  mem[259]
+mem[208] ←  mem[207] + mem[0]
+status ←  (mem[161] #<subr => 0)
+mem[210] ←  mem[status ? 208 : 3]
+status ←  (mem[164] #<subr <> 0)
+mem[212] ←  mem[status ? 210 : 3]
+mem[213] ←  mem[261]
+mem[214] = 10000.0
+status ←  (mem[5] #<subr => 0)
+mem[216] ←  mem[status ? 214 : 213]
+mem[217] ←  mem[160] * mem[104]
+mem[218] ←  mem[216] - mem[217]
+mem[219] = 25.0
+mem[220] = 45.0
+mem[221] ←  mem[214] - mem[218]
+mem[222] ←  mem[221] / mem[214]
+mem[223] ←  mem[222] * mem[220]
+mem[224] ←  mem[7] + mem[223]
+mem[225] ←  mem[224] + mem[219]
+mem[226] = 900.0
+mem[227] ←  mem[226] / mem[104]
+mem[228] ←  mem[227] - mem[212]
+status ←  (mem[228] #<subr <> 0)
+mem[230] ←  mem[status ? 225 : 3]
+mem[231] ←  mem[218] - mem[3]
+mem[232] ←  mem[242] - mem[0]
+status ←  (mem[231] #<subr <> 0)
+mem[234] ←  mem[status ? 232 : 230]
+mem[235] ←  mem[214] - mem[217]
+status ←  (mem[235] #<subr <> 0)
+mem[237] ←  mem[status ? 232 : 234]
+mem[238] = 6357000.0
+mem[239] ←  mem[150] - mem[238]
+status ←  (mem[239] #<subr <> 0)
+mem[241] ←  mem[status ? 232 : 237]
+mem[242] = 0.0
+OUT[0] ←  mem[241]
+OUT[1] ←  mem[218]
+OUT[2] ←  mem[169]
+OUT[3] ←  mem[167]
+OUT[4] ←  mem[52]
+mem[248] ←  mem[206]
+mem[249] ←  mem[74]
+mem[250] ←  mem[69]
+mem[251] ←  mem[98]
+mem[252] ←  mem[205]
+mem[253] ←  mem[202]
+mem[254] ←  mem[146]
+mem[255] ←  mem[124]
+mem[256] ←  mem[199]
+mem[257] ←  mem[187]
+mem[258] ←  mem[181]
+mem[259] ←  mem[212]
+mem[260] ←  mem[166]
+mem[261] ←  mem[218]
+mem[262] ←  mem[52]
+mem[263] ←  mem[24]
+mem[264] ←  mem[22]
+mem[265] ←  mem[14]
+> 

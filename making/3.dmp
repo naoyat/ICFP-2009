@@ -1,0 +1,176 @@
+mem[7] ←  (t == 0)? 30 : mem[410]
+mem[11] ←  (t == 0)? 1 : mem[408]
+mem[14] ←  (mem[11] == 1)? (mem[7] - 1) : mem[7]
+mem[19] ←  (t == 0)? 1000 : mem[409]
+mem[22] ←  (mem[11] == 1)? mem[19]*2 : mem[19]
+mem[24] ←  (mem[11] == 1)? mem[19] : mem[11]-1
+
+mem[33] ←  (config == 3004)?  8357000 : 0
+mem[37] ←  (config == 3003)?        0 : mem[33]
+mem[42] ←  (config == 3002)? -6357000 : mem[37]
+mem[46] ←  (config == 3001)?        0 : mem[42]
+
+z46 ← switch (config) {
+         case 3001: case 3003: default: 0
+         case 3002: -6357000
+         case 3004:  8357000
+       }
+
+mem[48] ←   (t == 0)? z46 : mem[401]
+mem[51] ←   (t == 0)?   0 : mem[391]
+
+z64 ← switch (config) {
+         case 3001:  8357000
+         case 3002: 63570000
+         case 3003:  7357000
+         case 3004:        0
+         default:          0
+       }
+
+mem[66] ←   (t == 0)? z64 : mem[400]
+mem[69] ←   (t == 0)?   0 : mem[390]
+mem[72] ←  (mem[69] - mem[66])^2 + (mem[51] - mem[48])^2
+M  ←  (t == 0)? 6.0e24 : M       // mass of earth
+μ ←  6.67428e-11 * M
+mem[82] ←  μ / √mem[72]^3
+mem[83] ←  (mem[51] - mem[48]) * mem[82]
+
+z97 ← switch (config) {
+         case 3001: -7614.568894374129
+         case 3002: -2242.0908674987954
+         case 3003: -10328.933800439107
+         case 3004: 0
+       }
+mem[99] ←   (t == 0)? z97 : mem[404]
+mem[102] ←  (mem[48] + mem[99]) + mem[83]/2
+
+z136 ← switch (config) {
+		  case 2002: case 3002: -6357000
+          case 2004: case 3004:  6457000
+          case 2001: case 2003: case 3001: case 3003: default: 0
+        }
+mem[138] ←   (t == 0)? z136 : mem[396]
+mem[139] ←  mem[51] - mem[138]
+
+z159 ← switch (config) {
+          case 2001: case 3001:  6557000
+          case 2002: case 3002:  6357000
+          case 2003: case 3003:  8357000
+          case 2004: case 3004: default: 0
+        }
+mem[161] ←   (t == 0)? z159 : mem[395]
+mem[162] ←  mem[69] - mem[161]
+mem[168] ←  μ / √(mem[162]^2 + mem[139]^2)^3
+mem[169] ←  mem[139] * mem[168]
+
+z191 ← switch (config) {
+          case 2001: case 3001: -7814.932738513376
+          case 2002: case 3002: -4719.317909067122
+          case 2003: case 3003: -6922.335358521935
+          case 2004:     0
+          default: mem[143];
+        }
+mem[193] ←  (t == 0)? mem[191] : mem[399]
+mem[195] ←  mem[138] + mem[193]
+mem[196] ←  mem[195] + (ΔVy + mem[169])/2
+mem[197] ←  mem[196] - mem[102]
+mem[199] ←  (mem[69] - mem[66]) * mem[82]
+
+z211 ← switch (config) {
+          case 3001: case 3003: 0
+          case 3002: -224.20908674987956
+          case 3004: 7614.568894374129
+          default: 0
+        }
+mem[213] ←   (t == 0)? z211 : mem[403]
+mem[216] ←  (mem[66] + mem[213]) + mem[199]/2
+mem[217] ←  mem[162] * mem[168]
+
+z239 ← switch (config) {
+          case 2001: case 2003: case 3001: case 3003: default: 0
+          case 2002: case 3002: -4719.317909067122
+          case 2004: case 3004: 7875.215433235455
+        }
+mem[241] ←   (t == 0)? z239 : mem[398]
+mem[243] ←  mem[161] + mem[241]
+mem[244] ←  mem[243] + (ΔVx + mem[217])/2
+mem[245] ←  mem[244] - mem[216]
+distance ←  √(mem[245]^2 + mem[197]^2)
+mem[249] ←  mem[406] + distance
+delta-v-norm ←  √(ΔVx^2 + ΔVy^2)
+mem[256] ←  (delta-v-norm == 0)? mem[249] : 0
+mem[259] ←  (distance < 1000)? mem[256] : 0
+mem[260] ←  mem[51] - mem[102]
+mem[262] ←  mem[69] - mem[216]
+mem[268] ←  μ / √(mem[262]^2 + mem[260]^2)^3
+mem[269] ←  mem[260] * mem[268]
+mem[270] ←  mem[269] + mem[83]
+mem[273] ←  mem[99] + mem[270]/2
+mem[274] ←  mem[262] * mem[268]
+mem[275] ←  mem[274] + mem[199]
+mem[278] ←  mem[213] + mem[275]/2
+
+z288 ← switch (config) {
+          case 3001: case 3002: case 3003: case 3004: 1
+          default: 0
+        }
+mem[290] ←   (t == 0)? z288 : mem[402]
+mem[291] ←  mem[51] - mem[196]
+mem[293] ←  mem[69] - mem[244]
+mem[295] ←  mem[293]^2 + mem[291]^2
+mem[299] ←  μ / √mem[295]^3
+mem[300] ←  mem[291] * mem[299]
+mem[301] ←  mem[300] + mem[169]
+mem[303] ←  ΔVy + mem[301]/2
+mem[305] ←  mem[193] + mem[303]
+mem[306] ←  mem[293] * mem[299]
+mem[307] ←  mem[306] + mem[217]
+mem[309] ←  ΔVx + mem[307]/2
+mem[311] ←  mem[241] + mem[309]
+mem[314] ←  (config == 3004)? 1 : 0
+mem[316] ←  (config == 3003)? 1 : mem[314]
+mem[318] ←  (config == 3002)? 1 : mem[316]
+mem[320] ←  (config == 3001)? 1 : mem[318]
+mem[322] ←  (config == 2004)? 1 : mem[320]
+mem[324] ←  (config == 2003)? 1 : mem[322]
+mem[326] ←  (config == 2002)? 1 : mem[324]
+mem[328] ←  (config == 2001)? 1 : mem[326]
+mem[330] ←  (t == 0)? mem[328] : mem[397]
+mem[333] ←  (t == 0)? 0 : mem[394]
+mem[336] ←  (t == 0)? 0 : mem[393]
+mem[338] ←  mem[102] - mem[196]
+mem[339] ←  mem[216] - mem[244]
+within-sec ←  (distance < 1000 && delta-v-norm == 0)? last-within-sec + 1 : 0
+fuel ←  ((t == 0)? 50000 : last-fuel) - delta-v-norm
+mem[364] ←  (within-sec > 900)? (mem[7] + fuel/50000*45 + 25)*4 : 0
+mem[368] ←  (fuel < 0)? -1 : mem[364]
+mem[371] ←  (delta-v-norm > 50000)? -1 : mem[368]
+mem[378] ←  √((mem[244] - mem[69])^2 + (mem[196] - mem[51])^2)
+
+OUT[0:score] ← (mem[378] < 6357000)? -1 : mem[371]
+OUT[1] ←  fuel
+OUT[2] ←  mem[293]
+OUT[3] ←  mem[291]
+OUT[4] ←  mem[339]
+OUT[5] ←  mem[338]
+t ←  t + 1
+mem[390] ←  mem[69]
+mem[391] ←  mem[51]
+mem[393] ←  mem[336]
+mem[394] ←  mem[333]
+mem[395] ←  mem[244]
+mem[396] ←  mem[196]
+mem[397] ←  mem[330]
+mem[398] ←  mem[311]
+mem[399] ←  mem[305]
+mem[400] ←  mem[216]
+mem[401] ←  mem[102]
+mem[402] ←  mem[290]
+mem[403] ←  mem[278]
+mem[404] ←  mem[273]
+last-within-sec ←  within-sec
+mem[406] ←  mem[259]
+last-fuel ←  fuel
+mem[408] ←  mem[24]
+mem[409] ←  mem[22]
+mem[410] ←  mem[14]
