@@ -1,5 +1,7 @@
 ICFP 2009 programs by naoya_t
 
+written in scheme, but very dirty code.
+
 requires:
   gauche 0.8.13
   gauche-gl
