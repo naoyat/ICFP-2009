@@ -1,9 +1,31 @@
-ICFP 2009 programs by naoya_t
+ICFP 2009 programs sources  by Team Ikoma (naoya_t)
 
-written in scheme, but very dirty code.
+Written in scheme, but very dirty code.
 
 requires:
-  gauche 0.8.13
-  gauche-gl
+ 1)  Gauche 0.8.13
+     Scheme interpreter.
+     Available in http://practical-scheme.net/gauche/
+     Latest version is 0.8.14 but it doesn't work well with gauche-gl
+     so we use older version 0.8.13.
+     (Please tell me if you cannot get the version 0.8.13)
 
-to let simulator move, hit space key on graphic screen
+ 2)  Gauche-gl
+     http://practical-scheme.net/vault/gauche-gl-refe.html
+
+--
+% gosh XXXX.scm
+       gosh is Gauche interpreter command.
+       XXXX is scenario number (1001-1004, 2001-2004, 3001-3004)
+
+To let simulator move, hit space key on graphic screen.
+We will hit space keys to progress the simulation until the score comes
+then trace log XXXX.osf will be produced.
+
+On some scenario, we will wait seconds to see the screen...
+
+
+---
+Naoya Tozuka (Team Ikoma)
+email: naoya.tozuka@gmail.com
+
