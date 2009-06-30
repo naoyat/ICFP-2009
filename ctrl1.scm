@@ -368,7 +368,6 @@
 (define vm (make-vm))
 
 (vm-load vm "bin1.obf")
-(define *scenario-id* 1004)
 
 (vm-begin-tracing vm *scenario-id*)
 (vm-set-configuration vm *scenario-id*)
